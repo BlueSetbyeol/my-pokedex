@@ -1,5 +1,4 @@
 import "./App.css";
-import MyTitle from "./components/MyTitle";
 import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [

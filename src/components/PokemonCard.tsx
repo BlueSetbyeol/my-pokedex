@@ -1,3 +1,8 @@
+interface pokemon {
+	name: string;
+	imgSrc?: string;
+}
+
 export default function PokemonCard({ pokemon }) {
 	return (
 		<figure>
