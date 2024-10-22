@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import HelloPokemon from './components/hello-pokemon.tsx';
-import './App.css'
+import "./App.css";
+import MyTitle from "./components/MyTitle";
 
 function App() {
-
-  return (
-
-  )
+	return (
+		<section>
+			<MyTitle />
+		</section>
+	);
 }
 
-export default App
+export default App;
