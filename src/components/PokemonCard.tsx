@@ -1,9 +1,11 @@
-interface pokemon {
-	name: string;
-	imgSrc?: string;
+interface pokemonProps {
+	pokemon: {
+		name: string;
+		imgSrc?: string;
+	};
 }
 
-export default function PokemonCard({ pokemon }) {
+export default function PokemonCard({ pokemon }: pokemonProps) {
 	return (
 		<figure>
 			{pokemon.imgSrc !== undefined ? (
