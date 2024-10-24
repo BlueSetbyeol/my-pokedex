@@ -1,3 +1,3 @@
 export default function MyTitle() {
-	return <h1>Hello React</h1>;
+  return <h1>Dear Pokemon</h1>;
 }
