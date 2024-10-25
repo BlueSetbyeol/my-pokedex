@@ -1,6 +1,7 @@
 interface pokemon {
   name: string;
   imgSrc?: string;
+  id: number;
 }
 
 interface NavBarProps {
@@ -14,10 +15,6 @@ export default function NavBar({
   setPokemonIndex,
   pokemonList,
 }: NavBarProps) {
-  const handleNextClick = () => {
-    setPokemonIndex(pokemon.id);
-  };
-
   return (
     <>
       {pokemonList.map((pokemon) => (
