@@ -17,9 +17,6 @@ export default function NavBar({
   const handleNextClick = (pokeIndex) => {
     setPokemonIndex(pokeIndex);
   };
-  //   const handlePreviousClick = () => {
-  //     setPokemonIndex(pokemonIndex - 1);
-  //   };
 
   return (
     <>
@@ -27,7 +24,11 @@ export default function NavBar({
         <button
           type="button"
           key={pokemon.name}
-          onClick={() => handleNextClick(pokeIndex)}
+          onClick={() => {
+            pokemon.name !== "pikachu"
+              ? handleNextClick(pokeIndex)
+              : (handleNextClick(pokeIndex), alert("pika pikachu !!"));
+          }}
         >
           {pokemon.name}
         </button>
