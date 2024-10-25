@@ -10,22 +10,20 @@ interface NavBarProps {
   pokemonList: pokemon[];
 }
 
-export default function NavBar({
-  pokemonIndex,
-  setPokemonIndex,
-  pokemonList,
-}: NavBarProps) {
+export default function NavBar({ setPokemonIndex, pokemonList }: NavBarProps) {
+  const handleClick = (element: pokemon) => {
+    setPokemonIndex(element.id);
+    if (element.name === "pikachu") {
+      alert("pika pikachu !!");
+    }
+  };
   return (
     <>
       {pokemonList.map((pokemon) => (
         <button
           type="button"
           key={pokemon.id}
-          onClick={() => {
-            pokemon.name !== "pikachu"
-              ? setPokemonIndex(pokemon.id)
-              : (setPokemonIndex(pokemon.id), alert("pika pikachu !!"));
-          }}
+          onClick={() => handleClick(pokemon)}
         >
           {pokemon.name}
         </button>
